@@ -8,7 +8,7 @@
       label-width="0px"
       class="demo-ruleForm login-container">
       <div>
-        <img class="logo" src="../assets/logo3.jpg" />
+        <img class="logo" src="../assets/logo30.png" style="width: 330px;height: 200px"/>
       </div>
       <div class="selectId">
         <el-select v-model="value" placeholder="请选择您的身份" style="width: 100%;">
@@ -58,15 +58,14 @@ export default {
       options: [
         {
           value: "1",
-          label: "学生"
+          label: "管理员"
         },
         {
           value: "2",
-          label: "老师"
-        },
-        {
+          label: "环保局"
+        },{
           value: "3",
-          label: "管理员或主任"
+          label: "企业"
         }
       ],
       value:'',
@@ -126,7 +125,7 @@ export default {
 .login{
   width: 100%;
   height: 100%;
-  background-image: url("../assets/bk1.jpg");
+  background-image: url("../assets/bk2.jpg");
   background-size: cover;
   background-position: center;
   position: fixed;

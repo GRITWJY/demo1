@@ -19,10 +19,5 @@ export default new Router({
 			name:'show',
 			component:()=>import('./views/Show.vue'),
 		},
-		{
-			path:'/jiaotong',
-			name:'jiaotong',
-			component:()=>import('./views/jiaotongmap.vue')
-		}
 	]
 })

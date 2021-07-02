@@ -66,15 +66,23 @@
 
       <el-main>
         <div id="map" v-show="ismap"></div>
-        <div style="position:absolute"><img src="../assets/map.png" v-show="isnomap" style="width: 100%; height: 100%"></div>
+        <div style="position:absolute"><img src="../assets/map2.png" v-show="isnomap" style="width: 100%; height: 100%"></div>
         <el-popover
           v-show="isnomap"
           placement="top-start"
-          title="标题"
+          title="设备号001"
           width="200"
-          trigger="hover"
-          content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-          <div slot="reference" style="position:absolute; margin-left: 100px; margin-top: 100px"><font-awesome-icon icon="map-marker" class="fa-2x icons" style="color: blue" @click="smallview"></font-awesome-icon></div>
+          trigger="hover">
+          <div>
+            <ul>
+              <li>电导率：40us/cm</li>
+              <li>水位：20mm</li>
+              <li>PH值: 5.5</li>
+              <li>温湿度: 17℃ </li>
+              <li>O2浓度： 30%</li>
+            </ul>
+          </div>
+          <div slot="reference" style="position:absolute; margin-left: 100px; margin-top: 100px"><font-awesome-icon icon="map-marker" class="fa-2x icons" style="color: #42b983" @click="smallview"></font-awesome-icon></div>
         </el-popover>
 
         <el-popover
@@ -82,9 +90,17 @@
           placement="top-start"
           title="标题"
           width="200"
-          trigger="hover"
-          content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-          <div slot="reference" style="position:absolute; margin-left: 190px; margin-top: 160px"><font-awesome-icon icon="map-marker" class="fa-2x icons" style="color: blue" @click="smallview"></font-awesome-icon></div>
+          trigger="hover">
+          <div>
+            <ul>
+              <li>电导率：40us/cm</li>
+              <li style="color: red">水位：700mm</li>
+              <li>PH值: 5.5</li>
+              <li>温湿度: 17℃ </li>
+              <li>O2浓度： 30%</li>
+            </ul>
+          </div>
+          <div slot="reference" style="position:absolute; margin-left: 190px; margin-top: 160px"><font-awesome-icon icon="map-marker" class="fa-2x icons" style="color: red" @click="smallview"></font-awesome-icon></div>
         </el-popover>
 
         <el-popover
@@ -92,9 +108,17 @@
           placement="top-start"
           title="标题"
           width="200"
-          trigger="hover"
-          content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-          <div slot="reference" style="position:absolute; margin-left: 290px; margin-top: 490px"><font-awesome-icon icon="map-marker" class="fa-2x icons" style="color: blue" @click="smallview"></font-awesome-icon></div>
+          trigger="hover">
+          <div>
+            <ul>
+              <li>电导率：40us/cm</li>
+              <li>水位：20mm</li>
+              <li>PH值: 5.5</li>
+              <li>温湿度: 17℃ </li>
+              <li style="color: yellow">O2浓度： 5%</li>
+            </ul>
+          </div>
+          <div slot="reference" style="position:absolute; margin-left: 290px; margin-top: 490px"><font-awesome-icon icon="map-marker" class="fa-2x icons" style="color: yellow" @click="smallview"></font-awesome-icon></div>
         </el-popover>
       </el-main>
     </el-container>
@@ -114,7 +138,7 @@
   border: 1px solid red;
 }
 .icons :hover{
-  color: #42b983;
+  color: blue;
   cursor: pointer;
 }
 .el-aside {
